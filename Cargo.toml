@@ -1,0 +1,26 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.dependencies]
+# Core serialization and deserialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# HTTP client for examples and testing
+reqwest = { version = "0.11", features = ["json"] }
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Error handling
+thiserror = "1.0"
+
+# Code generation from OpenAPI specs
+progenitor = "0.7"
+
+# YAML parsing for OpenAPI specs
+serde_yaml = "0.9"
+
+# Testing utilities
+pretty_assertions = "1.4"
